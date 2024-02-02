@@ -44,6 +44,10 @@
    transform: translateX(2px);
    box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
    transition: all 0.4s;
+   cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Убирает подсветку при нажатии */
+  user-select: none; /* Запрещает выделение текста */
+  -webkit-user-select: none;
 }
 .english__translate:active{
    transform: translateY(5px);
