@@ -58,6 +58,10 @@
    box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
 }
 
+.english__word-eng::first-letter {
+   text-transform: uppercase;
+}
+
 .english__wrapper-button {
    padding: 10px 0;
 }
@@ -73,6 +77,11 @@
    box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
    transition: all 0.4s;
 }
+
+.english__translate::first-letter {
+   text-transform: uppercase;
+}
+
 .english__translate:active{
    transform: translateY(5px);
    box-shadow: 0px 0px 0px 0px rgba(66, 68, 90, 1);
@@ -87,12 +96,12 @@
       gap: 30px;
    } 
 }
-@media (any-hover: hover){
+/* @media (any-hover: hover){ */
    .english__translate:hover {
       transform: translateY(5px);
       box-shadow: 0px 0px 0px 0px rgba(66, 68, 90, 1);
    }
-}
+/* } */
 @media (max-width: 768.98px){
    .english__translate {
       padding: 15px 15px;
