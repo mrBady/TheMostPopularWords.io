@@ -30,6 +30,7 @@
    font-size: 18px;
    line-height: 16px;
    font-weight: 500;
+   box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
    
 }
 .header__chenge {
@@ -41,6 +42,7 @@
    padding: 10px 40px;
    border: 1px solid #000;
    border-radius: 10px;
+   box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
 }
 .chenge__optiin {
    background: #e9e9e91a;

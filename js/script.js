@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Восстанавливаем счет из localStorage, если он есть
   const savedScore = localStorage.getItem('userScore');
   if (savedScore) {
-    getScore.textContent = savedScore;
+    getScore.textContent = savedScore; // Преобразование строки в целое число
   }
-
   // Вызываем функцию загрузки данных
   fetchJsonFile(filePath);
 });
@@ -105,7 +104,7 @@ function checkAnswer(selectedTranslation, correctTranslation) {
 // Функция для обновления счета пользователя и сохранения в localStorage
 function scoreUser() {
   const currentScore = parseInt(getScore.textContent);
-  const newScore = currentScore + 1;
+  const newScore = `${currentScore + 1} очков`;
   getScore.textContent = newScore;
 
   // Сохраняем новый счет в localStorage
