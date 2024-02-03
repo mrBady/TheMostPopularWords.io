@@ -5,7 +5,7 @@ const getWrapper = document.querySelector('.wrapper')
 const getScore = document.querySelector('.header__score')
 
 // Путь к файлу JSON
-const filePath = 'js/eng.json';
+const filePath = 'js/eng-v2.json';
 
 let randomWord;
 
@@ -28,8 +28,8 @@ function fetchJsonFile(filePath) {
     .then(data => {
       const randomIndex = Math.floor(Math.random() * data.words.length);
       randomWord = data.words[randomIndex];
-      createTitle(randomWord.english);
-      createButtons(randomWord.russian, data.words);
+      createTitle(randomWord.eng);
+      createButtons(randomWord.ru, data.words);
       addClickEventListeners(data.words);
     })
     .catch(error => console.error('Ошибка при загрузке файла:', error));
@@ -62,8 +62,8 @@ function getUniqueTranslations(correctTranslation, allWords, count) {
     const randomIndex = Math.floor(Math.random() * allWords.length);
     const randomWord = allWords[randomIndex];
 
-    if (randomWord.russian !== correctTranslation && !translations.includes(randomWord.russian)) {
-      translations.push(randomWord.russian);
+    if (randomWord.ru !== correctTranslation && !translations.includes(randomWord.ru)) {
+      translations.push(randomWord.ru);
     }
   }
 
@@ -81,7 +81,7 @@ function addClickEventListeners(allWords) {
 // Функция для обработки нажатия на кнопку
 function handleButtonClick() {
   const selectedTranslation = this.textContent;
-  checkAnswer(selectedTranslation, randomWord.russian);
+  checkAnswer(selectedTranslation, randomWord.ru);
 }
 
 // Функция для проверки ответа

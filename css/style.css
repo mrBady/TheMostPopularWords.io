@@ -3,10 +3,10 @@
    background: #cacaca1a;
 }
 .right {
-   background: rgba(56, 253, 56, 0.151);
+   background: hsla(120, 98%, 61%, 0.4);
 }
 .wrong{
-   background: rgba(228, 83, 64, 0.247);
+   background: rgba(255, 44, 16, 0.4);
 }
 
 .header {
@@ -53,7 +53,7 @@
    min-height: 70vh;
 }
 .english__container {
-   width: 100%;
+   /* width: 100%; */
    display: flex;
    flex-direction: column;
    gap: 40px;
