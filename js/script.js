@@ -1,9 +1,10 @@
 // Получаем элементы
 const getTitle = document.querySelector('.english__word-eng');
 const getButtons = document.querySelectorAll('.english__translate');
+const getWrapper = document.querySelector('.wrapper')
 
 // Путь к файлу JSON
-const filePath = 'js/jsonWordsInEng.json';
+const filePath = 'js/eng.json';
 
 let randomWord;
 
@@ -21,6 +22,7 @@ function fetchJsonFile(filePath) {
       createTitle(randomWord.english);
       createButtons(randomWord.russian, data.words);
       addClickEventListeners(data.words);
+     
     })
     .catch(error => console.error('Ошибка при загрузке файла:', error));
 }
@@ -78,14 +80,23 @@ function handleButtonClick() {
 // Функция для проверки ответа
 function checkAnswer(selectedTranslation, correctTranslation) {
   if (selectedTranslation === correctTranslation) {
-    alert('Правильно!');
-    fetchJsonFile(filePath); // Загрузим новое слово после правильного ответа
+    getWrapper.classList.add('right')
+    setTimeout(() => {
+      fetchJsonFile(filePath); // Загрузим новое слово после правильного ответа
+      getWrapper.classList.remove('right')
+    }, 1000);
+    // alert('Правильно!');
   } else {
-    alert('Неправильно! Попробуйте еще раз.');
+    getWrapper.classList.add('wrong')
+    setTimeout(() => {
+      getWrapper.classList.remove('wrong')
+    }, 500);
+    // alert('Неправильно! Попробуйте еще раз.');
   }
 }
 
 // Вызов функции с указанием пути к файлу после загрузки DOM
 document.addEventListener('DOMContentLoaded', function () {
   fetchJsonFile(filePath);
+ 
 });

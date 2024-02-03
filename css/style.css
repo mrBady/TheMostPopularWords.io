@@ -1,21 +1,49 @@
+.wrapper{
+   transition: all 0.3s;
+   background: #cacaca1a;
+}
+.right {
+   background: rgba(56, 253, 56, 0.151);
+}
+.wrong{
+   background: rgba(228, 83, 64, 0.247);
+}
+
+.header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 60px;
+}
+.header__container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.header__chenge {
+ 
+}
+.chenge__select {
+   background: #e9e9e91a;
+   padding: 10px 40px;
+   border: 1px solid #000;
+   border-radius: 10px;
+}
+.chenge__optiin {
+   background: #e9e9e91a;
+}
+/* --------------------------------------------------------------------- */
 .page-main__english {
    display: flex;
-   flex-direction: column;
-   justify-content: center;
    align-items: center;
-   min-height: 100%;
-  
+   justify-content: center;
+   min-height: 70vh;
 }
 .english__container {
    width: 100%;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   gap: 45px;
-   max-width: 900px;
-   padding-left: 15px;
-   padding-right: 15px;
-   overflow: hidden;
+   gap: 40px;
 }
 .english__word-eng {
    min-width: 240px;
@@ -36,7 +64,7 @@
 
 .english__translate {
    background: #cfda4171;
-   padding: 15px 40px;
+   padding: 15px 30px;
    border-radius: 10px;
    border: 1px solid  rgba(66, 68, 90, 1);;
    font-size: 16px;
@@ -55,7 +83,14 @@
 }
 
 /* ========================================================================== */
-
+@media (min-width:768.98px){
+   .english__wrapper-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+   } 
+}
 @media (any-hover: hover){
    .english__translate:hover {
       transform: translateY(5px);
@@ -64,14 +99,13 @@
 }
 @media (max-width: 768.98px){
    .english__translate {
-      padding: 10px 15px;
+      padding: 15px 15px;
       font-size: 14px;
    }
 }
 @media (max-width:768.98px){
    .english__wrapper-button {
       display: grid;
-      width: 100%;
       grid-template-columns: repeat(2, minmax(140px, 200px));
       gap: 15px;
       justify-content: center;
@@ -81,12 +115,4 @@
    .english__word-eng{
       font-size: 26px;
    }
-}
-@media (min-width:768.98px){
-   .english__wrapper-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-   } 
 }
