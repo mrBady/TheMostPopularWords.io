@@ -73,7 +73,7 @@
    box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
 }
 
-.english__translate::first-letter {
+.english__word-eng::first-letter {
    text-transform: uppercase;
 }
 
@@ -85,7 +85,7 @@
    background: #cfda4171;
    padding: 15px 30px;
    border-radius: 10px;
-   border: 1px solid  rgba(66, 68, 90, 1);;
+   border: 1px solid  rgba(66, 68, 90, 1);
    font-size: 16px;
    line-height: 18px;
    transform: translateX(2px);
@@ -136,4 +136,11 @@
    .english__word-eng{
       font-size: 26px;
    }
+}
+@media (max-width: 768.98px){
+   .header__score{
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+   } 
 }
