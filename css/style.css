@@ -60,17 +60,32 @@
    flex-direction: column;
    gap: 40px;
 }
-.english__word-eng {
+.english__word-wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
    min-width: 240px;
    padding: 30px 30px;
    border: 1px solid #000;
    border-radius: 10px;
    text-align: center;
+
+   background: #43e95075;
+   box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
+}
+.english__word-eng {
    font-size: 36px;
    font-family: sans-serif;
    font-weight: 500;
-   background: #43e95075;
-   box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
+  
+}
+.english__word-subtitle{
+   font-size: 22px;
+   font-style: italic;
+   font-family: sans-serif;
+   font-weight: 500;
 }
 
 .english__word-eng::first-letter {
@@ -91,6 +106,7 @@
    transform: translateX(2px);
    box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, 1);
    transition: all 0.4s;
+   cursor: pointer;
 }
 
 .english__translate::first-letter {
@@ -100,6 +116,7 @@
 .english__translate:active{
    transform: translateY(5px);
    box-shadow: 0px 0px 0px 0px rgba(66, 68, 90, 1);
+   cursor: pointer;
 } 
 
 /* ========================================================================== */
@@ -135,6 +152,11 @@
 @media (max-width:768.98px){
    .english__word-eng{
       font-size: 26px;
+   }
+}
+@media (max-width:768.98px){
+   .english__word-subtitle{
+      font-size: 18px;
    }
 }
 @media (max-width: 768.98px){

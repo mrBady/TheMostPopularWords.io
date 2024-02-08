@@ -1,11 +1,12 @@
 // Получаем элементы
 const getTitle = document.querySelector('.english__word-eng');
+const getSubTitle = document.querySelector('.english__word-subtitle');
 const getButtons = document.querySelectorAll('.english__translate');
 const getWrapper = document.querySelector('.wrapper')
 const getScore = document.querySelector('.header__score')
 
 // Путь к файлу JSON
-const filePath = 'js/eng-v2.json';
+const filePath = 'js/eng-v3.json';
 
 let randomWord;
 
@@ -28,6 +29,7 @@ function fetchJsonFile(filePath) {
       const randomIndex = Math.floor(Math.random() * data.words.length);
       randomWord = data.words[randomIndex];
       createTitle(randomWord.eng);
+      createSubtitle(randomWord.transcription)
       createButtons(randomWord.ru, data.words);
       addClickEventListeners(data.words);
     })
@@ -38,6 +40,10 @@ function fetchJsonFile(filePath) {
 function createTitle(englishText) {
   getTitle.textContent = englishText;
 }
+function createSubtitle(transcription) {
+  getSubTitle.textContent = transcription;
+}
+
 
 // Функция для установки текста в кнопки
 function createButtons(correctTranslation, allWords) {
