@@ -5,6 +5,48 @@ const getButtons = document.querySelectorAll('.english__translate');
 const getWrapper = document.querySelector('.wrapper')
 const getScore = document.querySelector('.header__score')
 
+// клик для ios
+document.addEventListener('DOMContentLoaded', function() {
+  const isiPhone = /iPhone/i.test(navigator.userAgent);
+
+  if (isiPhone) {
+    const translateButtons = document.querySelectorAll('.english__translate');
+
+    translateButtons.forEach(button => {
+      button.addEventListener('touchstart', () => {
+        // Задержка перед началом анимации
+        setTimeout(() => {
+          // Добавляем класс для анимации
+          button.classList.add('pressed');
+
+          // Устанавливаем начальные стили
+          button.style.transform = 'translateY(0px)';
+          button.style.boxShadow = '0px 5px 0px 0px rgba(66, 68, 90, 1)';
+        }, 300); // Задержка в миллисекундах перед началом анимации
+      });
+
+      // Используем событие touchcancel для обработки случая, когда палец перемещается за пределы кнопки
+      button.addEventListener('touchcancel', () => {
+        resetStyles(button);
+      });
+
+      button.addEventListener('touchend', () => {
+        resetStyles(button);
+      });
+    });
+
+    // Функция для сброса стилей
+    function resetStyles(button) {
+      // Убираем класс анимации
+      button.classList.remove('pressed');
+
+      // Возвращаем переходы и сбрасываем стили
+      button.style.transition = '';
+      button.style.transform = 'translateY(5px)';
+      button.style.boxShadow = '0px 0px 0px 0px rgba(66, 68, 90, 1)';
+    }
+  }
+});
 // Путь к файлу JSON
 const filePath = 'js/eng-v3.json';
 
