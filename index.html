@@ -10,30 +10,49 @@
 <body>
    <div class="wrapper">
       <header class="header">
-         <div class="header__container">
-            <div class="header__score">
-               0
-            </div>
-            <div class="header__chenge">
-               <!-- <select class="chenge__select" name="" id="select-1">
-                  <option class="chenge__optiin" value="">English</option>
-                  <option class="chenge__optiin" value="">Polish</option>
-               </select> -->
-            </div>
+         <div  class="header__container">
+            <div data-tab-name="tab-1" class="header__score">0</div>
+            <div data-tab-name="tab-2" class="header__score">0</div>
          </div>
       </header>
       <main class="main">
-         <section class="page-main__english">
-            <div class="english__container">
-               <div class="english__word-wrapper">
-                  <h1 class="english__word-eng"></h1>
-                  <div class="english__word-subtitle"></div>
-               </div>
-               <div class="english__wrapper-button">
-                  <button class="english__translate"></button>
-                  <button class="english__translate"></button>
-                  <button class="english__translate"></button>
-                  <button class="english__translate"></button>
+         <section class="page-main__learn">
+            <div class="learn__container">
+               <div class="learn__tabs tab">
+                  <nav class="tab__navigation">
+                     <button data-tab-name="tab-1" type="button" class="tab__title-button">English</button>
+                     <button data-tab-name="tab-2" type="button" class="tab__title-button">Polish</button>
+                  </nav>
+                  <div class="tab__content">
+                     <div data-tab-name="tab-1" class="tab__body tab-eng">
+                        <div class="tab__body-wrapper ">
+                           <div class="tab__word-wrapper">
+                              <h1 class="tab__word"></h1>
+                              <div class="tab__word-subtitle"></div>
+                           </div>
+                           <div class="tab__wrapper-button">
+                              <button class="tab__translate"></button>
+                              <button class="tab__translate"></button>
+                              <button class="tab__translate"></button>
+                              <button class="tab__translate"></button>
+                           </div>
+                        </div>
+                     </div>
+                     <div data-tab-name="tab-2" class="tab__body tab-pol">
+                        <div class="tab__body-wrapper">
+                           <div class="tab__word-wrapper">
+                              <h1 class="tab__word"></h1>
+                              <div class="tab__word-subtitle"></div>
+                           </div>
+                           <div class="tab__wrapper-button">
+                              <button class="tab__translate"></button>
+                              <button class="tab__translate"></button>
+                              <button class="tab__translate"></button>
+                              <button class="tab__translate"></button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </section>
